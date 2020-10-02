@@ -39,7 +39,7 @@ namespace Atv05
 
             /* 6 ) Atribua um valor a uma variável do tipo inteiro e exiba seu antecessor. */
             int q6_n1 = 10;
-            int q6_n2 = q6_n1++;
+            int q6_n2 = q6_n1--;
             Console.WriteLine($"O antecessor de {q6_n1} é: {q6_n2}");
 
             /* 7 ) Atribua um valor a uma variável do tipo inteiro e exiba seu sucessor. */
