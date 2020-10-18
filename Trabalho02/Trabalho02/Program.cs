@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Headers;
 using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
@@ -90,9 +91,9 @@ namespace Trabalho02
             Console.WriteLine("Insira o numero do terceiro valor: ");
             double q6_C = double.Parse(Console.ReadLine());
 
-            double q6_areaA = 2; ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            double q6_areaA = (q6_A * q6_C) / 2;
             double q6_areaB = 3.14159 * q6_C * q6_C;
-            double q6_areaC = 3; ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            double q6_areaC = ((q6_A + q6_B) * q6_C) / 2;
             double q6_areaD = q6_B * q6_B;
             double q6_areaE = q6_A * q6_B;
 
@@ -122,7 +123,7 @@ namespace Trabalho02
             Console.WriteLine("Insira o valor de analise: ");
             double q8 = double.Parse(Console.ReadLine());
 
-            if (q8 % 2 = 0)
+            if (q8 % 2 == 0)
             {
                 Console.WriteLine("O numero é par!");
             }
@@ -139,7 +140,7 @@ namespace Trabalho02
             double q91 = double.Parse(Console.ReadLine());
             Console.WriteLine("Insira o valor do segundo numero: ");
             double q92 = double.Parse(Console.ReadLine());
-            if (q91 % q92 = 0)
+            if (q91 % q92 == 0)
             {
                 Console.WriteLine($"O numero {q91} é multiplo de {q92}");
             }
@@ -162,7 +163,7 @@ namespace Trabalho02
             {
                 Console.WriteLine("Excedeu o máximo para uma partida!");
             }
-            else if (q10_total < 1 ) 
+            else if (q10_total < 1)
             {
                 Console.WriteLine("Tempo de jogo insuficiente");
             }
@@ -231,7 +232,7 @@ namespace Trabalho02
             {
                 Console.WriteLine("Esta no intervalo de 75 a 100");
             }
-            else if (q12 < 0 || q12>100)
+            else if (q12 < 0 || q12 > 100)
             {
                 Console.WriteLine("Fora do intervalo!");
             }
@@ -301,7 +302,7 @@ namespace Trabalho02
             }
             else if (q14 < 4500)
             {
-                imposto = (q14 - 3000) * 0.18 + (1000*0.8);
+                imposto = (q14 - 3000) * 0.18 + (1000 * 0.8);
                 Console.WriteLine($"O total a ser pago é: {imposto}");
             }
             else if (q14 > 4500)
@@ -321,7 +322,7 @@ namespace Trabalho02
             Console.WriteLine("Programa que retorna se a senha é correta");
             bool senha = false;
 
-            while (senha = false)
+            while (senha == false)
             {
                 Console.WriteLine("Insira a senha: ");
                 string q15 = Console.ReadLine();
@@ -337,7 +338,7 @@ namespace Trabalho02
                     senha = false;
                 }
 
-            }            
+            }
 
             // Exercício 16 - - Escreva um programa para ler as coordenadas (X,Y) de uma //
             // quantidade indeterminada de pontos no sistema cartesiano.Para cada ponto //
@@ -373,13 +374,13 @@ namespace Trabalho02
             // de combustível abastecido(codificado da seguinte forma:
             Console.WriteLine("Programa que retorna quais os combustiveis preferidos");
             Console.WriteLine("Insira o codigo referente a sua preferencia de combustivel ");
-            int q17 = 0;
+            int q17_conf = 0;
             int alcool = 0;
             int gasolina = 0;
             int diesel = 0;
             bool cont = true;
 
-            while (cont = true)
+            while (cont == true)
             {
 
                 while (q17 != 4)
@@ -390,23 +391,24 @@ namespace Trabalho02
                     Console.WriteLine("2.Gasolina ");
                     Console.WriteLine("3.Diesel");
                     Console.WriteLine("4.Fim");
-                    int q17_X = int.Parse(Console.ReadLine());
-                    if (q17 = 1)
+
+                    int q17 = int.Parse(Console.ReadLine());
+                    if (q17 == 1)
                     {
-                        alcool = alcool + 1
+                        alcool++;
                     }
 
-                    else if (q17 = 2)
+                    else if (q17 == 2)
                     {
-                        gasolina = gasolina + 1
+                        gasolina++;
 
                     }
 
-                    else if (q17 = 3)
+                    else if (q17 == 3)
                     {
-                        diesel = diesel + 1
+                        diesel++;
                     }
-                    else if (q17 = 4)
+                    else if (q17 == 4)
                     {
                         Console.WriteLine("Muito Obrigado!");
                     }
@@ -419,15 +421,16 @@ namespace Trabalho02
                     Console.WriteLine("Deseja continuar a votação?");
                     Console.WriteLine("1.Sim");
                     Console.WriteLine("2.Não ");
-                    int q17 = int.Parse(Console.ReadLine());
-                    if (q17 = 1)
+                    int q17_conf = int.Parse(Console.ReadLine());
+
+                    if (q17_conf == 1)
                     {
                         cont = true;
                     }
 
-                    else if (q17 = 2)
+                    else if (q17_conf == 2)
                     {
-                        cont = false
+                        cont = false;
                     }
                 }
             }
@@ -439,23 +442,22 @@ namespace Trabalho02
 
             // Exercício 18 - Leia um valor inteiro X (1 <= X <= 1000). Em seguida mostre os
             // ímpares de 1 até X, um valor por linha, inclusive o X, se for o caso. //
-            
+
             Console.WriteLine("Programa que retorna os numeros impares");
             Console.WriteLine("Digite o valor maximo do intervalo: ");
-            int q18 = int.Parse(Console.ReadLine());
-            cont = 0;
-            while (cont < q18)
+            int q18_num = int.Parse(Console.ReadLine());
+            int q18_cont = 1;
+            while (q18_cont < q18_num)
             {
-                cont = cont + 1;
 
-                if (cont % 2 =! 0)
+                if (q18_cont % 2 != 0)
                 {
-                    Console.WriteLine(cont + " impar");
-                    cont = cont + 1;
+                    Console.WriteLine(q18_cont + " impar");
+                    q18_cont++;
                 }
                 else
                 {
-                    cont = cont + 1;
+                    q18_cont++;
                 }
             }
 
@@ -468,8 +470,8 @@ namespace Trabalho02
             int q19_cont = 0;
             Console.WriteLine("Programa responde se o numero inserido esta entre o intervalo de 10 a 20");
             Console.WriteLine("Quantas analises deseja fazer? ");
-            int q19 = int.Parse(Console.ReadLine());
-            while (q19_cont < q19)
+            int q19_num = int.Parse(Console.ReadLine());
+            while (q19_cont < q19_num)
             {
                 Console.WriteLine("Digite o valor: ");
                 int q19_num = int.Parse(Console.ReadLine());
@@ -481,7 +483,7 @@ namespace Trabalho02
                 {
                     Console.WriteLine(q19_num + " in");
                 }
-                cont = cont + 1;
+                q19_cont++;
             }
 
             // Exercício 20 - Leia 1 valor inteiro N, que representa o número de casos de teste
@@ -489,29 +491,97 @@ namespace Trabalho02
             // com uma casa decimal.Apresente a média ponderada para cada um destes
             // conjuntos de 3 valores, sendo que o primeiro valor tem peso 2, o segundo valor
             // tem peso 3 e o terceiro valor tem peso 5. //
+            int q20_cont = 1;
+            Console.WriteLine("Programa que realiza o calculo da media ponderada de 3 valores");
+            Console.WriteLine("Quantas analises deseja fazer? ");
+            int q20_num = int.Parse(Console.ReadLine());
+            while (q20_cont != q20_num)
+            {
+                Console.WriteLine($"{q20_cont}º analise:");
+                Console.WriteLine("Digite o primeiro valor que terá peso 2: ");
+                double q20_p1 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Digite o segundo valor que terá peso 3: ");
+                double q20_p2 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Digite o segundo valor que terá peso 5: ");
+                double q20_p3 = double.Parse(Console.ReadLine());
 
+                double q20_med = (q20_p1 * 2 + q20_p2 * 3 + q20_p3 * 5) / (2 + 3 + 5);
+
+                Console.WriteLine($"O resultado da média é de: {q20_med} ");
+
+                q20_cont++;
+
+            }
 
             // Exercício 21 - Fazer um programa para ler um número N. Depois leia N pares de
             // números e mostre a divisão do primeiro pelo segundo.Se o denominador for
             // igual a zero, mostrar a mensagem "divisao impossivel".
+
+            int q21_cont = 1;
+            Console.WriteLine("Programa que realiza a divisão de N pares");
+            Console.WriteLine("Quantasanalises deseja fazer? ");
+            int q21_num = int.Parse(Console.ReadLine());
+
+            while (q21_cont != q21_num)
+            {
+
+                Console.WriteLine($"{q21_cont}º analise:");
+                Console.WriteLine("Digite o primeiro valor: ");
+                double q21_p1 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Digite o segundo valor, que será o divisor do primeiro: ");
+                double q21_p2 = double.Parse(Console.ReadLine());
+
+                if (q21_p2 > 0)
+                {
+                    double q21_div = q21_p1 / q21_p1;
+                    Console.WriteLine($"O resultado da divisão é de: {q21_div} ");
+                    q21_cont++;
+                }
+                else
+                {
+                    Console.WriteLine("Divisão impossivel: ");
+                }
+
+            }
+
             // Exercício 22 - Ler um valor N. Calcular e escrever seu respectivo fatorial. Fatorial
             // de N = N * (N - 1) * (N - 2) * (N - 3) * ... *1.Lembrando que, por definição, fatorial de
             // 0 é 1.// 
+            int q22_cont = 1;
+            double q22_fat = 1;
+            Console.WriteLine("Programa que realiza o calculo fatorial de um numero");
+            Console.WriteLine("Qual numero deseja usar na analise? ");
+            int q22_num = int.Parse(Console.ReadLine());
+
+            if (q22_num != 0)
+            {
+                while (q22_cont != q22_num)
+                {
+                    q22_fat = q22_fat * (q22_num - q22_cont);
+                    q22_cont++;
+                }
+            }
 
 
-            // Exercício 23 - Ler um número inteiro N e calcular todos os seus divisores.
+        // Exercício 23 - Ler um número inteiro N e calcular todos os seus divisores.
 
 
 
-            // Exercício 24 - Fazer um programa para ler um número inteiro positivo N. O
-            // programa deve então mostrar na tela N linhas, começando de 1 até N.Para cada
-            // linha, mostrar o número da linha, depois o quadrado e o cubo do valor, conforme
-            // exemplo. //
+        // Exercício 24 - Fazer um programa para ler um número inteiro positivo N. O
+        // programa deve então mostrar na tela N linhas, começando de 1 até N.Para cada
+        // linha, mostrar o número da linha, depois o quadrado e o cubo do valor, conforme
+        // exemplo. //
+        int q24_cont = 0;
+        Console.WriteLine("Programa que imprime um determinado numero de linhas, junto com o valor do quadrado e do cubo da posição");
+        Console.WriteLine("Digite o valor no numero de analise que serão feitas: ");
+        int q24_num = int.Parse(Console.ReadLine());
+        while (q24_cont != q24_num)
 
 
 
 
 
-        }
+
+
     }
-}
+    }
