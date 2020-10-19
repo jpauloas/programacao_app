@@ -446,8 +446,9 @@ namespace Trabalho02
             Console.WriteLine("Programa que retorna os numeros impares");
             Console.WriteLine("Digite o valor maximo do intervalo: ");
             int q18_num = int.Parse(Console.ReadLine());
-            int q18_cont = 1;
-            while (q18_cont < q18_num)
+
+            for (int q18_cont = 1; q18_cont < q18_num; q18_cont++)
+
             {
 
                 if (q18_cont % 2 != 0)
@@ -455,10 +456,7 @@ namespace Trabalho02
                     Console.WriteLine(q18_cont + " impar");
                     q18_cont++;
                 }
-                else
-                {
-                    q18_cont++;
-                }
+                
             }
 
             // Exercício 19 - Leia um valor inteiro N. Este valor será a quantidade de valores
@@ -467,23 +465,24 @@ namespace Trabalho02
             // estão fora do intervalo, mostrando essas informações conforme exemplo(use a
             // palavra "in" para dentro do intervalo, e "out" para fora do intervalo). //
 
-            int q19_cont = 0;
             Console.WriteLine("Programa responde se o numero inserido esta entre o intervalo de 10 a 20");
             Console.WriteLine("Quantas analises deseja fazer? ");
             int q19_num = int.Parse(Console.ReadLine());
-            while (q19_cont < q19_num)
+
+            for (int q19_cont = 1; q19_cont < q19_num; q19_cont++)
             {
                 Console.WriteLine("Digite o valor: ");
                 int q19_num = int.Parse(Console.ReadLine());
                 if (10 < q19_num < 20)
                 {
-                    Console.WriteLine(q19_num + " out");
+                    Console.WriteLine($"{q19_num} out");
                 }
+
                 else
                 {
-                    Console.WriteLine(q19_num + " in");
+                    Console.WriteLine($"{q19_num} in" );
                 }
-                q19_cont++;
+              
             }
 
             // Exercício 20 - Leia 1 valor inteiro N, que representa o número de casos de teste
@@ -491,11 +490,13 @@ namespace Trabalho02
             // com uma casa decimal.Apresente a média ponderada para cada um destes
             // conjuntos de 3 valores, sendo que o primeiro valor tem peso 2, o segundo valor
             // tem peso 3 e o terceiro valor tem peso 5. //
-            int q20_cont = 1;
+
             Console.WriteLine("Programa que realiza o calculo da media ponderada de 3 valores");
-            Console.WriteLine("Quantas analises deseja fazer? ");
-            int q20_num = int.Parse(Console.ReadLine());
-            while (q20_cont != q20_num)
+            Console.WriteLine ("Quantas analises deseja fazer?");
+            int q20num = int.Parse(Console.ReadLine());
+
+            for (int q20_cont = 1; q20_cont < q20num; q20num++)
+
             {
                 Console.WriteLine($"{q20_cont}º analise:");
                 Console.WriteLine("Digite o primeiro valor que terá peso 2: ");
@@ -509,20 +510,18 @@ namespace Trabalho02
 
                 Console.WriteLine($"O resultado da média é de: {q20_med} ");
 
-                q20_cont++;
-
             }
 
             // Exercício 21 - Fazer um programa para ler um número N. Depois leia N pares de
             // números e mostre a divisão do primeiro pelo segundo.Se o denominador for
             // igual a zero, mostrar a mensagem "divisao impossivel".
 
-            int q21_cont = 1;
+            
             Console.WriteLine("Programa que realiza a divisão de N pares");
             Console.WriteLine("Quantasanalises deseja fazer? ");
             int q21_num = int.Parse(Console.ReadLine());
 
-            while (q21_cont != q21_num)
+            for (int q21_cont = 1; q21_cont < q21_num; q21_num++)
             {
 
                 Console.WriteLine($"{q21_cont}º analise:");
@@ -547,21 +546,23 @@ namespace Trabalho02
             // Exercício 22 - Ler um valor N. Calcular e escrever seu respectivo fatorial. Fatorial
             // de N = N * (N - 1) * (N - 2) * (N - 3) * ... *1.Lembrando que, por definição, fatorial de
             // 0 é 1.// 
-            int q22_cont = 1;
+
             double q22_fat = 1;
             Console.WriteLine("Programa que realiza o calculo fatorial de um numero");
             Console.WriteLine("Qual numero deseja usar na analise? ");
             int q22_num = int.Parse(Console.ReadLine());
-
-            if (q22_num != 0)
+            if (q22_num == 0)
             {
-                while (q22_cont != q22_num)
+                Console.WriteLine("O resultado é de : 1");
+            }
+            else 
+            {
+                for (int q22_cont = 1; q22_cont < q22_num; q22_num++)
                 {
                     q22_fat = q22_fat * (q22_num - q22_cont);
-                    q22_cont++;
                 }
+                Console.WriteLine($"O resultado é de : {q22_fat}");
             }
-
 
         // Exercício 23 - Ler um número inteiro N e calcular todos os seus divisores.
 
