@@ -564,25 +564,34 @@ namespace Trabalho02
                 Console.WriteLine($"O resultado é de : {q22_fat}");
             }
 
-        // Exercício 23 - Ler um número inteiro N e calcular todos os seus divisores.
+            // Exercício 23 - Ler um número inteiro N e calcular todos os seus divisores.
+            Console.WriteLine("Digite um número: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+
+            // Exercício 24 - Fazer um programa para ler um número inteiro positivo N. O
+            // programa deve então mostrar na tela N linhas, começando de 1 até N.Para cada
+            // linha, mostrar o número da linha, depois o quadrado e o cubo do valor, conforme
+            // exemplo. //
+
+            Console.WriteLine("Digite um número inteiro positivo: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine(i + Math.Pow(i, 2.0) + Math.Pow(i, 3.0));
+            }
 
 
 
-        // Exercício 24 - Fazer um programa para ler um número inteiro positivo N. O
-        // programa deve então mostrar na tela N linhas, começando de 1 até N.Para cada
-        // linha, mostrar o número da linha, depois o quadrado e o cubo do valor, conforme
-        // exemplo. //
-        int q24_cont = 0;
-        Console.WriteLine("Programa que imprime um determinado numero de linhas, junto com o valor do quadrado e do cubo da posição");
-        Console.WriteLine("Digite o valor no numero de analise que serão feitas: ");
-        int q24_num = int.Parse(Console.ReadLine());
-        while (q24_cont != q24_num)
 
 
 
-
-
-
-
-    }
+        }
     }
