@@ -9,7 +9,7 @@ namespace ConsoleApp1
 
         public static double conv (double dolar, double compra)
         {
-            return dolar * compra* 1.10;
+            return dolar * compra* 1.06;
             
         }
 
