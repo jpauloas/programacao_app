@@ -221,7 +221,6 @@ namespace SA02_JOAO_PAULO_ARAUJO
                         Console.WriteLine("1 - Listar todas");
                         Console.WriteLine("2 - Listar por Categoria");
                         Console.WriteLine("3 - Listar por nivel de dificuldade");
-                        Console.WriteLine("4 - Todas");
                         Console.WriteLine("");
                         Console.WriteLine("");
                         Console.Write("Digite a opção desejada: ");
@@ -422,7 +421,7 @@ namespace SA02_JOAO_PAULO_ARAUJO
 
                     case 3: // Sessão de edição
                         Console.Clear();
-                        menu_edicao:
+
                         Console.WriteLine("");
                         Console.WriteLine("_____________________________________________________");
                         Console.WriteLine("");
@@ -495,10 +494,7 @@ namespace SA02_JOAO_PAULO_ARAUJO
                                     {
                                         goto menu_edicao_receita;
                                     }
-                                    if (selecao_resposta == 2)
-                                    {
-                                        goto menu_edicao;
-                                    }
+                                    
 
 
                                     break;
@@ -536,10 +532,7 @@ namespace SA02_JOAO_PAULO_ARAUJO
                                     {
                                         goto menu_edicao_receita;
                                     }
-                                    if (selecao_resposta == 2)
-                                    {
-                                        goto menu_edicao;
-                                    }
+
 
 
                                     break;
@@ -587,10 +580,7 @@ namespace SA02_JOAO_PAULO_ARAUJO
                                     {
                                         goto menu_edicao_receita;
                                     }
-                                    if (selecao_resposta == 2)
-                                    {
-                                        goto menu_edicao;
-                                    }
+                                   
 
                                     break;
 
@@ -635,11 +625,7 @@ namespace SA02_JOAO_PAULO_ARAUJO
                                     {
                                         goto menu_edicao_receita;
                                     }
-                                    if (selecao_resposta == 2)
-                                    {
-                                        goto menu_edicao;
-                                    }
-
+                                   
                                     break;
 
                                 case 5:
@@ -676,10 +662,7 @@ namespace SA02_JOAO_PAULO_ARAUJO
                                     {
                                         goto menu_edicao_receita;
                                     }
-                                    if (selecao_resposta == 2)
-                                    {
-                                        goto menu_edicao;
-                                    }
+                                   
 
                                     break;
 
@@ -717,10 +700,7 @@ namespace SA02_JOAO_PAULO_ARAUJO
                                     {
                                         goto menu_edicao_receita;
                                     }
-                                    if (selecao_resposta == 2)
-                                    {
-                                        goto menu_edicao;
-                                    }
+                                   
 
                                     break;
 
@@ -757,10 +737,7 @@ namespace SA02_JOAO_PAULO_ARAUJO
                                     {
                                         goto menu_edicao_receita;
                                     }
-                                    if (selecao_resposta == 2)
-                                    {
-                                        goto menu_edicao;
-                                    }
+                                    
 
                                     break;
 
@@ -797,10 +774,7 @@ namespace SA02_JOAO_PAULO_ARAUJO
                                     {
                                         goto menu_edicao_receita;
                                     }
-                                    if (selecao_resposta == 2)
-                                    {
-                                        goto menu_edicao;
-                                    }
+                                  
 
                                     break;
 
